@@ -29,5 +29,4 @@ public class PostFilter extends ZuulFilter {
 	public int filterOrder() {
 		return 1;
 	}
-
 }
