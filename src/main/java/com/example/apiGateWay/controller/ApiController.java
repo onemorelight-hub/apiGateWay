@@ -49,9 +49,10 @@ public class ApiController {
 		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(object);
 	}
 	
-	@PostMapping (value = "/google/createToken")
+	
+	@PostMapping (value = "/mobile/createToken")
 	public ResponseEntity<Map<String, Object>> createTokenGoogleUser(@RequestBody Map<String, Object> user) {
-		System.out.println("Google user data"+ user);
+		System.out.println("Mobile user data"+ user);
 		Map<String, Object> object = new HashMap<>();
 		String token = jwtTokenGenerator.generateToken();
 		object.put("token", token);
